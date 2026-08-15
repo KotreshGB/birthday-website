@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="balloon balloon-1">🎈</div>
+    <div class="balloon balloon-2">🎈</div>
+    <div class="balloon balloon-3">🎈</div>
+    <div class="balloon balloon-4">🎈</div>
+    <div class="balloon balloon-5">🎈</div>
+
+    <div class="stars">✨</div>
+    <div class="stars star-2">✨</div>
+    <div class="stars star-3">⭐</div>
+
+    <main class="birthday-card">
+        <div class="top-text">🎉 A Special Day 🎉</div>
+
+        <h1>Happy Birthday</h1>
+
+        <h2>Dear <span>NEHA</span> ❤️</h2>
+
+        <div class="photo-container">
+            <img src="{{ url_for('static', filename='birthday.jpeg') }}"
+                 alt="Birthday Photo"
+                 onerror="this.style.display='none';">
+        </div>
+
+        <div class="cake">🎂</div>
+
+        <p class="birthday-message">
+            Today is a very special day because it celebrates
+            someone truly special. 💖
+        </p>
+
+        <p class="birthday-message">
+            May your life always be filled with happiness,
+            success, love, laughter and beautiful memories. ✨
+        </p>
+
+        <p class="wish">Wishing you the happiest birthday ever! 🥳</p>
+
+        <div class="countdown-section">
+            <h3>🎁 Your Special Moment 🎁</h3>
+            <div class="countdown">
+                <div class="time-box"><span id="days">00</span><small>Days</small></div>
+                <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+                <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+                <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+            </div>
+        </div>
+
+        <button class="surprise-button" onclick="showSurprise()">
+            🎁 Open Your Surprise
+        </button>
+
+        <div id="surprise-message" class="hidden-message">
+            <div class="gift">🎁</div>
+            <h2>You Are Amazing! ❤️</h2>
+            <p>
+                Never stop smiling. Never stop dreaming.
+                And always remember how special you are. 💕
+            </p>
+            <div class="hearts">❤️ 💖 💕 💗 ❤️</div>
+        </div>
+
+        <footer>Made with ❤️ just for you</footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

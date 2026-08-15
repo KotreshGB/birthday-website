@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top left, #ffb6c1, transparent 35%),
+        radial-gradient(circle at bottom right, #c084fc, transparent 35%),
+        linear-gradient(135deg, #ff758c, #ff7eb3, #a78bfa);
+    overflow-x: hidden;
+}
+
+.birthday-card {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    padding: 45px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    animation: cardAppear 1.2s ease;
+}
+
+@keyframes cardAppear {
+    from { opacity: 0; transform: translateY(50px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.top-text {
+    font-size: 18px;
+    color: #e91e63;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 52px;
+    color: #e91e63;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(233, 30, 99, 0.2);
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+h2 span {
+    color: #9c27b0;
+}
+
+.photo-container {
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cake {
+    font-size: 90px;
+    margin: 15px;
+    animation: cakeBounce 1.8s infinite;
+}
+
+@keyframes cakeBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.birthday-message {
+    max-width: 560px;
+    margin: 15px auto;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.wish {
+    margin-top: 20px;
+    color: #e91e63;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.countdown-section {
+    margin: 30px 0;
+}
+
+.countdown-section h3 {
+    color: #7b1fa2;
+    margin-bottom: 15px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    min-width: 85px;
+    padding: 15px 10px;
+    background: linear-gradient(135deg, #ff4081, #9c27b0);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 7px 15px rgba(156, 39, 176, 0.25);
+}
+
+.time-box span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.time-box small {
+    font-size: 12px;
+}
+
+.surprise-button {
+    border: none;
+    padding: 16px 30px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #ff4081, #9c27b0);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(156, 39, 176, 0.3);
+    transition: all 0.3s ease;
+}
+
+.surprise-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 25px rgba(156, 39, 176, 0.4);
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff0f6;
+    animation: surpriseAppear 0.8s ease;
+}
+
+@keyframes surpriseAppear {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.gift {
+    font-size: 70px;
+    animation: giftBounce 1s infinite;
+}
+
+@keyframes giftBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+.hidden-message p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.hearts {
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+footer {
+    margin-top: 30px;
+    color: #888;
+    font-size: 14px;
+}
+
+.balloon {
+    position: fixed;
+    font-size: 70px;
+    z-index: 1;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.balloon-1 { top: 8%; left: 4%; }
+.balloon-2 { top: 20%; right: 5%; }
+.balloon-3 { bottom: 10%; left: 7%; }
+.balloon-4 { bottom: 15%; right: 8%; }
+.balloon-5 { top: 50%; left: 1%; }
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+.stars {
+    position: fixed;
+    top: 10%;
+    right: 25%;
+    font-size: 30px;
+    animation: twinkle 1.5s infinite;
+}
+
+.star-2 { top: 70%; right: 20%; }
+.star-3 { top: 30%; left: 20%; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.4); }
+}
+
+@media (max-width: 600px) {
+    body { padding: 15px; }
+    .birthday-card { padding: 35px 20px; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 21px; }
+    .cake { font-size: 70px; }
+    .birthday-message { font-size: 16px; }
+    .wish { font-size: 19px; }
+    .balloon { font-size: 45px; }
+    .time-box { min-width: 70px; padding: 12px 8px; }
+    .time-box span { font-size: 22px; }
+}
